@@ -17,11 +17,21 @@ $(document).ready(function(){
 
     //  V2 anda con getJson
     $(document).on({
-        ajaxStart: function() { $('#spinner').show(); $.blockUI({ message: ""} );   },
+        ajaxStart: function() { activarProcesando() },
         //ajaxStop: function() { $('#spinner').hide(); }    
-        ajaxComplete: function() { $('#spinner').hide();  $.unblockUI(); }    
+        ajaxComplete: function() { desactivarProcesando() }    
     })
 });
+
+function activarProcesando() {
+    $('#spinner').show(); 
+    $.blockUI({ message: "" });
+}
+
+function desactivarProcesando() {
+    $('#spinner').hide();  
+    $.unblockUI();
+}
 
 
 
