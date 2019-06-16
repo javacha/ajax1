@@ -1,0 +1,36 @@
+#heroesTable  #heroesTable {
+	border: 1px solid #dddddd;
+	width: 100%;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px; /* half width of the spinner gif */
+    margin-top: -25px; /* half height of the spinner gif */
+    text-align:center;
+    z-index:1234;
+	overflow: auto;
+}
+
+
+.loading {
+	-webkit-animation:spin 1s linear infinite;
+	-moz-animation:spin 21s linear infinite;
+	animation:spin 1s linear infinite;
+}
+@-moz-keyframes spin { 100% { 
+	-moz-transform:rotate(360deg); 
+	}
+}
+@-webkit-keyframes spin { 100% { 
+	-webkit-transform:rotate(360deg); 
+	}
+}
+@keyframes spin { 100% {
+	-webkit-transform:rotate(360deg);
+	transform:rotate(360deg);
+	}
+}

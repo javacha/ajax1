@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Easy jQuery - Learn AJAX - how to use .getJSON() - #14 -->
+    <p>
+        Welcome to the 14th Easy jQuery Tutorial, part of <a href="http://www.easyprogramming.net">EasyProgramming.net</a>. This is similar to the $.get() method but it gives you very strict control over what kind of data your web page is expecting, JSON. 
+    </p>
+
+    <p>
+    $.getJSON() example:</p>
+    <pre>
+    $.getJSON(url,data, successCallbacK);
+    </pre>
+    <p>
+    Notice that there is no 'datatype' argument here because type JSON is built in. 
+    </p>
+    <p>
+    A full example would look something like this:
+    </p>
+    <pre>
+    $.getJSON(url,data, successCallbacK)
+        .done(function(){})
+        .fail(function(){})
+        .always(function(){});
+    </pre>
+    <p>
+    The example is pretty straight forward so let's practice below.
+    </p>
+
+    <h2>
+        Let's practice:
+    </h2>
+
+    <button id="queryBtn">Consultar</button>
+    <table id="heroesTable">
+        <thead>
+            <th>Nombre</th>
+            <th>Email</th>
+        </thead>
+        <tbody id="heroesBody"></tbody>
+    </table>
+
+    <br><br><br><br><br><br><br>
+
+
+    <div id="spinner" class="spinner" style="display:none;">
+            <img id="img-spinner" src="img/spinner.png" class="loading" alt="Loading"/>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js" />
+</body>
+</html>
+
+
+
